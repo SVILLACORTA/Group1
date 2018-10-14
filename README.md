@@ -82,3 +82,47 @@ People looking to lose/gain weight
 Health conscious people
 
 Owner: us
+
+
+Part B:
+1. Decompose your user stories into tasks
+    1. Create splash screen
+    2. Create login screen
+    3. Create logo
+    4. Create backend database objects 
+    5. Create entry screen
+    5. Create main screen
+    6. Create visualizations
+    7. Create weight history screen
+    8. Update entry screen
+    9. Create SMS messaging
+    10. Incorporate calorie suggestion
+    11. Daily calorie consumption entry
+    12. Update/delete calorie consumption
+    13. Create calorie consumption tracking screen
+    14. Create visualizations for admin
+    
+
+2. Decompose your user stories into tasks (iteration1)
+    1. Create splash screen
+    2. Create login screen
+    3. Create logo
+    4. Create backend database objects
+    
+3. Build the iterations (at most 2) that will compose your Milestone 1.0. Record the total days of work and the time it will take for your team to complete that work.
+    1. Total days of work = 2 week iterations (10 working days) and 4 hours each day for team
+
+4. Make sure you have dealt with velocity before breaking into iterations.
+    1. Velocitiy - 
+    
+5. Allocate tasks to each team member and record the allocation.
+    1. Create splash screen - Alaa
+    2. Create login screen - Yi
+    3. Create logo  - Seher
+    4. Create backend database objects - Serena
+    
+6. Create a burn down chart for monitoring your team’s progress.
+![Alt text](C:\Group1\Documents\burndown chart iteration 1.png?raw=true "Title")
+
+7. Create a burn down chart for monitoring your team’s progress.
+    1. Please see meeting minutes under documents folder
