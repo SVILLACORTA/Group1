@@ -103,26 +103,42 @@ Part B:
     14. Create visualizations for admin
 
 
-2. Decompose your user stories into tasks (iteration1)
-    1. Create splash screen
-    2. Create login screen
-    3. Create logo
-    4. Create backend database objects
+2. ITERATION -1  Decompose your user stories into tasks (Oct 4 – Oct 15)
+Working days: 8 Days
+Create splash screen
+Create login screen
+Create logo
+Create backend database objects
 
-3. Build the iterations (at most 2) that will compose your Milestone 1.0. Record the total days of work and the time it will take for your team to complete that work.
-    1. Total days of work = 2 week iterations (10 working days) and 4 hours each day for team
+3.ITERATION- 2  Decompose your user stories into tasks (Oct16 – Nov 8)
+Working days: 18 Days
+Create backend database object
+Create user information screen
+Create view information page
+Create update information page
+Create weight tracking page
 
-4. Make sure you have dealt with velocity before breaking into iterations.
-    1. Velocitiy -
 
-5. Allocate tasks to each team member and record the allocation.
+4. Build the iterations (at most 2) that will compose your Milestone 1.0. Record the total days of work and the time it will take for your team to complete that work.
+
+Total days of work = 26 days (Oct 4 – Nov 8  - 1Milestone, 2 iterations)
+
+
+5. Make sure you have dealt with velocity before breaking into iterations.
+             Velocitiy – 30% or 0.3 per person
+        4(person) X 26(days) X 0.3(V)  = 31 amount of work for 1      Milestone
+
+
+6. Allocate tasks to each team member and record the allocation.
     1. Create splash screen - Alaa
     2. Create login screen - Yi
     3. Create logo  - Seher
     4. Create backend database objects - Serena
 
-6. Create a burn down chart for monitoring your teamâ€™s progress.
-    1. Please see "burndown chart iteration 1.png under Documents folder"
 
 7. Create a burn down chart for monitoring your teamâ€™s progress.
+
+    1. Please see "burndown chart- 1 milestone.jpg" under Documents folder
+
+7. Include evidence that you are meeting for periodic stand up meetings with your teammates.
     1. Please see meeting minutes under documents folder
