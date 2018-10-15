@@ -2,7 +2,7 @@ from django.db import models
 
 
 class User(models.Model):
-    '''用户表'''
+    '''User Table'''
 
     gender = (
         ('male', 'M'),
@@ -21,4 +21,4 @@ class User(models.Model):
     class Meta:
         ordering = ['c_time']
         verbose_name = 'User'
-        verbose_name_plural = 'USer'
+        verbose_name_plural = 'User'
