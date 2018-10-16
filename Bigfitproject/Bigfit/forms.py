@@ -5,6 +5,8 @@ class UserForm(forms.Form):
     username = forms.CharField(label="Username", max_length=128)
     password = forms.CharField(label="Password", max_length=256, widget=forms.PasswordInput)
 
+
+
 class RegisterForm(forms.Form):
     gender = (
         ('male', "M"),

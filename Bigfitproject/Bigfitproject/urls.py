@@ -19,8 +19,8 @@ from Bigfit import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/',views.login),
-    path('index/',views.index),
-    path('register/',views.register),
+    path('login/',views.login, name = 'login page'),
+    path('index/',views.index, name = 'index page'),
+    path('register/',views.register, name = 'register page'),
     path('logout/',views.logout),
 ]
