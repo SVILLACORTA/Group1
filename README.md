@@ -103,14 +103,14 @@ Part B:
     14. Create visualizations for admin
 
 
-2. ITERATION -1  Decompose your user stories into tasks (Oct 4 – Oct 15)
+2. ITERATION -1  Decompose your user stories into tasks (Oct 4 ï¿½ Oct 15)
 Working days: 8 Days
 Create splash screen
 Create login screen
 Create logo
 Create backend database objects
 
-3.ITERATION- 2  Decompose your user stories into tasks (Oct16 – Nov 8)
+3.ITERATION- 2  Decompose your user stories into tasks (Oct16 ï¿½ Nov 8)
 Working days: 18 Days
 Create backend database object
 Create user information screen
@@ -121,11 +121,11 @@ Create weight tracking page
 
 4. Build the iterations (at most 2) that will compose your Milestone 1.0. Record the total days of work and the time it will take for your team to complete that work.
 
-Total days of work = 26 days (Oct 4 – Nov 8  - 1Milestone, 2 iterations)
+Total days of work = 26 days (Oct 4 ï¿½ Nov 8  - 1Milestone, 2 iterations)
 
 
 5. Make sure you have dealt with velocity before breaking into iterations.
-             Velocitiy – 30% or 0.3 per person
+             Velocitiy ï¿½ 30% or 0.3 per person
         4(person) X 26(days) X 0.3(V)  = 31 amount of work for 1      Milestone
 
 
@@ -140,5 +140,14 @@ Total days of work = 26 days (Oct 4 – Nov 8  - 1Milestone, 2 iterations)
 
     1. Please see "burndown chart- 1 milestone.jpg" under Documents folder
 
-7. Include evidence that you are meeting for periodic stand up meetings with your teammates.
+8. Include evidence that you are meeting for periodic stand up meetings with your teammates.
     1. Please see meeting minutes under documents folder
+
+Demo present tips:
+We are using a Python3+Pycharm+Django environment to work on the website. Please download 'Bigfitproject' folder under our git repository and open it with Python IDE. You can use any IDE contains Django to see our progress(We are using Django professional).
+Right now, we finished a simple front end design to achieve user register and login, you can see the codes in views.py file under root folder.
+Also HTML coding for index, login, register webpage, you can find them in 'templates' folder under root folder.
+You can also run the project, then open a webpage and enter 'http://127.0.0.1:8000/index' to take a look on our current webpage. We are still working on integrate front end coding with our database, so the system could not work for collecting data.
+For pytest of our project, you can find them in the folder 'tests'. 
+For running pytest, please open the terminal first, and enter 'pip install pytest-django' under root folder.
+then, just enter 'pytest' under root folder to see the pytest result.
