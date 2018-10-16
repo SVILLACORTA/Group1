@@ -1,4 +1,4 @@
-# Group1
+﻿# Group1
 Group 1 project team
 
 Team Name: The Big Fit
@@ -144,10 +144,15 @@ Total days of work = 26 days (Oct 4 � Nov 8  - 1Milestone, 2 iterations)
     1. Please see meeting minutes under documents folder
 
 Demo present tips:
-We are using a Python3+Pycharm+Django environment to work on the website. Please download 'Bigfitproject' folder under our git repository and open it with Python IDE. You can use any IDE contains Django to see our progress(We are using Django professional).
-Right now, we finished a simple front end design to achieve user register and login, you can see the codes in views.py file under root folder.
-Also HTML coding for index, login, register webpage, you can find them in 'templates' folder under root folder.
-You can also run the project, then open a webpage and enter 'http://127.0.0.1:8000/index' to take a look on our current webpage. We are still working on integrate front end coding with our database, so the system could not work for collecting data.
-For pytest of our project, you can find them in the folder 'tests'. 
-For running pytest, please open the terminal first, and enter 'pip install pytest-django' under root folder.
-then, just enter 'pytest' under root folder to see the pytest result.
+
+1.We are using a Python3+Pycharm+Django environment to work on the website. Please download 'Bigfitproject' folder under our git repository and open it with Python IDE. You can use any IDE contains Django to see our progress(We are using Django professional).
+
+2.Right now, we finished a simple front end design to achieve user register and login, you can see the codes in views.py file under root folder.
+
+3.Also HTML coding for index, login, register webpage, you can find them in 'templates' folder under root folder.
+
+4.You can also run the project, then open a webpage and enter 'http://127.0.0.1:8000/index' to take a look on our current webpage. We are still working on integrate front end coding with our database, so the system could not work for collecting data.
+
+5.For pytest of our project, you can find them in the folder 'tests'. 
+
+6.For running pytest, please open the terminal first, and enter 'pip install pytest-django' under root folder. Then, just enter 'pytest' under root folder to see the pytest result.

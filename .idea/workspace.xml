@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ee47660-7b68-44ec-8d52-7a6c61366824" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/329264dd-6af4-4934-b972-45f02b0bd05c.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Bigfitproject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Bigfitproject/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -87,31 +86,32 @@
     <session id="-1587270199">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="md" value="1117" />
+          <entry key="md" value="1136" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="1117" />
+          <entry key="Markdown" value="1136" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="726">
-                <caret line="145" column="17" selection-start-line="145" selection-start-column="17" selection-end-line="145" selection-end-column="17" />
+              <first_editor relative-caret-position="1814">
+                <caret line="157" column="112" selection-start-line="157" selection-start-column="112" selection-end-line="157" selection-end-column="112" />
               </first_editor>
               <second_editor />
             </state>
@@ -148,37 +148,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Group1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Group1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Group1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Group1" type="462c0819:PsiDirectoryNode" />
-              <item name="Bigfitproject" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Group1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Group1" type="462c0819:PsiDirectoryNode" />
-              <item name="Bigfitproject" type="462c0819:PsiDirectoryNode" />
-              <item name="Bigfit" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Group1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Group1" type="462c0819:PsiDirectoryNode" />
-              <item name="Bigfitproject" type="462c0819:PsiDirectoryNode" />
-              <item name="Bigfitproject" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="sqlite" />
@@ -244,7 +214,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.37313432" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -318,8 +287,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="726">
-            <caret line="145" column="17" selection-start-line="145" selection-start-column="17" selection-end-line="145" selection-end-column="17" />
+          <first_editor relative-caret-position="1814">
+            <caret line="157" column="112" selection-start-line="157" selection-start-column="112" selection-end-line="157" selection-end-column="112" />
           </first_editor>
           <second_editor />
         </state>
