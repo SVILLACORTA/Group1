@@ -1,35 +1,16 @@
 from django.db import models
 from django.core.validators import MaxValueValidator
+from django.contrib.auth.models import AbstractUser
 
 
-class Account(models.Model):
-    email = models.CharField(max_length=100)
-    password = models.CharField(max_length=100)
-    start_date = models.DateTimeField(auto_now_add=True)
-    end_date = models.DateTimeField(null=True, blank=True)
-    insert_date = models.DateTimeField(auto_now_add=True)
-    update_date = models.DateTimeField(auto_now=True)
-
-    def __str__(self):
-        return self.email
-
-    class Meta:
-        ordering = ['email', 'id']
-
-
-class User(models.Model):
+class User(AbstractUser):
     SEX_CHOICES = [('M', 'Male'), ('F', 'Female')]
-    account = models.OneToOneField(Account, on_delete=models.CASCADE)
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    target_weight = models.PositiveSmallIntegerField(validators=[MaxValueValidator(999)])
-    feet = models.PositiveSmallIntegerField(validators=[MaxValueValidator(9)])
-    inches = models.PositiveSmallIntegerField(validators=[MaxValueValidator(11)])
-    date_of_birth = models.DateField()
-    gender = models.CharField(choices=SEX_CHOICES, max_length=1)
-    zip_code = models.CharField(max_length=5)
-    insert_date = models.DateTimeField(auto_now_add=True)
-    update_date = models.DateTimeField(auto_now=True)
+    target_weight = models.PositiveSmallIntegerField(validators=[MaxValueValidator(999)], null=True)
+    feet = models.PositiveSmallIntegerField(validators=[MaxValueValidator(9)], null=True)
+    inches = models.PositiveSmallIntegerField(validators=[MaxValueValidator(11)], null=True)
+    date_of_birth = models.DateField(null=True)
+    gender = models.CharField(choices=SEX_CHOICES, max_length=1, null=True)
+    zip_code = models.CharField(max_length=5, null=True)
 
     def __str__(self):
         return '%s, %s' % (self.last_name, self.first_name)
@@ -49,4 +30,4 @@ class WeightTracker(models.Model):
         return str(self.weight)
 
     class Meta:
-        ordering = ['user', 'user_id', 'record_date']
+        ordering = ['user', 'record_date']
