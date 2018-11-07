@@ -2,23 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7fbf9752-5232-4bdf-9ce2-c5429467d997" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/weighthistory.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/weightinput.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Bigfitproject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Bigfitproject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bigfit/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bigfit/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bigfit/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bigfit/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bigfit/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bigfit/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bigfit/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bigfit/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bigfitproject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bigfitproject/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test.registration.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test.registration.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -142,7 +125,7 @@
           <entry key="js" value="1" />
           <entry key="md" value="1" />
           <entry key="pstat" value="1" />
-          <entry key="py" value="68" />
+          <entry key="py" value="69" />
           <entry key="sqlite3" value="1" />
         </counts>
       </usages-collector>
@@ -154,7 +137,7 @@
           <entry key="JavaScript" value="1" />
           <entry key="Markdown" value="1" />
           <entry key="Profiler Session" value="1" />
-          <entry key="Python" value="68" />
+          <entry key="Python" value="69" />
           <entry key="SQL" value="1" />
         </counts>
       </usages-collector>
@@ -222,11 +205,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/weighthistory.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
               <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/test.registration.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -414,6 +406,11 @@
               <item name="Bigfitproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bigfitproject" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bigfitproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bigfitproject" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -603,12 +600,12 @@
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.35714287" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35714287" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.29656607" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32882413" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32882413" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39854318" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -732,16 +729,6 @@
     <entry file="file://$PROJECT_DIR$/Bigfit/management/commands/load_bf_data.py" />
     <entry file="file://$PROJECT_DIR$/templates/contact_us.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test.registration.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pytest.ini">
       <provider selected="true" editor-type-id="text-editor">
@@ -872,6 +859,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test.registration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
