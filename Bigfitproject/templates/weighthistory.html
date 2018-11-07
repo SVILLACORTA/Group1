@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Weight History{% endblock %}
+{% block content %}
+    <html>
+    <body>
+        <table border="1">
+            <tr>
+                <th>user_id</th>
+                <th>id</th>
+                <th>weight</th>
+                <th>record date</th>
+            </tr>
+            {% for item in li %}
+            <tr>
+                <td>{{ item.user_id }}</td>
+                <td>{{ item.id }}</td>
+                <td>{{ item.weight }}</td>
+                <td>{{ item.record_date }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+    </html>
+{% endblock %}

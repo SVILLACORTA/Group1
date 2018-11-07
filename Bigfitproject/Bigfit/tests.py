@@ -1,3 +1,4 @@
-from django.test import TestCase
 
-# Create your tests here.
+def test(request):
+    current_user = request.user
+    print(current_user.id)

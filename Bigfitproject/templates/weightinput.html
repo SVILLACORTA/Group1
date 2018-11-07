@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Register{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="col-md-4 col-md-offset-4">
+          <form class='form-weightinput' action="/weightinput/" method="post">
+              {% csrf_token %}
+              <div class="form-input">
+                  {{ weightinput_form.current_weight.label_tag }}
+                  {{ weightinput_form.current_weight }}
+              </div>
+
+              <button type="submit" class="btn btn-primary pull-right">submit</button>
+
+          </form>
+        </div>
+    </div>
+{% endblock %}

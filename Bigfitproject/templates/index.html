@@ -1,9 +1,12 @@
+
 {% extends 'base.html' %}
-{% block title %}Main Page{% endblock %}
+{% block title %}main page{% endblock %}
 {% block content %}
     {% if request.session.is_login %}
-    <h1>Hello,{{ request.session.user_name }}！Welcome Back！</h1>
+    <h1>Hello,{{ request.session.user_name }}！Welcome back！</h1>
+        <li><a href="/weightinput/">Input Weight</a></li>
+        <li><a href="/weighthistory/">Visit WeightHistory</a></li>
     {% else %}
-    <h1>You haven't login, please login first.</h1>
+    <h1>You are not currently online, you can only access the public page.</h1>
     {% endif %}
 {% endblock %}

@@ -3,6 +3,7 @@ from django.contrib.sites. import Site
 from django.core import mail
 from django.test import TestCase
 from registration.models import RegistrationProfile
+
 class TestRegistration(TestCase):
     def test_activation_email(self):
         site = Site.objects.get()

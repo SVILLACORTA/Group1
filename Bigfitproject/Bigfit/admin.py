@@ -8,7 +8,7 @@ class WeightTrackerInline(admin.TabularInline):
 
 
 class UserAdmin(admin.ModelAdmin):
-    list_display = ['last_name', 'first_name', 'username', 'target_weight', 'feet'
+    list_display = ['last_name', 'first_name', 'username', 'password','target_weight', 'feet'
                     , 'inches', 'date_of_birth', 'gender', 'zip_code']
     inlines = [WeightTrackerInline]
 
