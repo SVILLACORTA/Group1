@@ -2,7 +2,8 @@
 from django.shortcuts import render,redirect,HttpResponse
 from . import models
 from .forms import UserForm,RegisterForm,WeightinputForm
-from django.contrib.auth import login
+from django.contrib.auth import login as guest_login,authenticate
+import datetime
 
 def index(request):
     pass
@@ -22,6 +23,8 @@ def login(request):
             password = login_form.cleaned_data['password']
             try:
                 user = models.User.objects.get(username=username)
+                if user is not None:
+                    guest_login(request, user)
                 if user.password == password:
                     request.session['is_login'] = True
                     request.session['user_id'] = user.id
@@ -95,15 +98,17 @@ def weightinput(request):
         weightinput_form = WeightinputForm(request.POST)
         if weightinput_form.is_valid():
             cweight = weightinput_form.cleaned_data['current_weight']
-            new_weight = models.WeightTracker.objects.create(user_id=11)
+
+            new_weight = models.WeightTracker.objects.create()
+            new_weight.user_id = request.user.id
             new_weight.weight = cweight
             new_weight.save()
+
             return redirect('/index/')
     weightinput_form = WeightinputForm
     return render(request, 'weightinput.html',locals())
 
 def weighthistory(request):
     current_id = request.user.id
-    weight_tracker_list_obj = models.WeightTracker.objects.filter(user_id=11)
+    weight_tracker_list_obj = models.WeightTracker.objects.filter(user_id=current_id)
     return render(request, 'weighthistory.html',{'li':weight_tracker_list_obj})
-    return HttpResponse(request.user.username)
