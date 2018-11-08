@@ -1,8 +1,12 @@
-from django.shortcuts import render,redirect,HttpResponse
+from django.shortcuts import render, redirect, HttpResponse
 from . import models
-from .forms import UserForm,RegisterForm,WeightinputForm
-from django.contrib.auth import login as guest_login,authenticate
+from .forms import UserForm,RegisterForm, WeightinputForm
+from django.contrib.auth import login as guest_login, authenticate
 import datetime
+
+
+def home(request):
+    return render(request, 'home.html')
 
 
 def index(request):
