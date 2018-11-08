@@ -16,13 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Bigfit import views
+from django.conf.urls import url
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    # path('admin/', admin.site.urls),
     path('login/', views.login, name='login page'),
     path('index/', views.index, name='index page'),
     path('register/', views.register, name='register page'),
     path('logout/', views.logout),
     path('weightinput/', views.weightinput),
-    path('weighthistory/', views.weighthistory)
+    path('weighthistory/', views.weighthistory),
+    url(r'^admin/', admin.site.urls),
+    url(r'^home/', views.home, name='home')
 ]

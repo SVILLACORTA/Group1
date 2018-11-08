@@ -1,0 +1,331 @@
+﻿	
+/* RESET */
+	
+
+html, body 	{ margin: 0; padding: 0; border:0; 
+				background: transparent; font-size:10px;}
+				
+				
+div, span, article, aside, footer, header, hgroup, nav, section,
+h1, h2, h3, h4, h5, h6, p, blockquote, a, ol, ul, li,
+table, tr, th, td, tbody, tfoot, thead{
+		margin:0;
+		padding:0;
+		border:0;
+		vertical-align: baseline;
+		background:transparent;
+		}
+		
+		
+img { margin:0; padding:0; border:0;}
+
+table {border-collapse: collapse; border-spacing:0;}
+
+input, select, textarea, form, fieldset{
+		margin:0; padding:0; border:0;
+		}
+		
+		
+article, aside, dialog, figure, footer, header, hgroup, nav, section {
+		display:block; }
+		
+h1, h2, h3, h4, h5, h6, p, li, blockquote, td, th, a, caption, em, strong, strike {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:100%;
+		font-weight: normal;
+		font-style:normal;
+		line-height: 100%;
+		text-indent:0;
+		text-decoration:none;
+		text-align: left;
+		color: #000;
+		}
+		
+		
+		
+ol, ul { list-style: none; }
+
+
+
+/* Global */
+
+html {     }
+body {background-color:#EA0071   }		
+
+
+/* Heading */
+
+h1, h2, h3, h4, h5, h6 { font-weight:bold; color: #000;}
+
+h1 {font-size:24px;}
+h2 {font-size:20px;}
+h3 {font-size:16px;}
+h4 {font-size:14px;}
+h5 {font-size:14px;}
+h6 {font-size:14px;}
+
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {margin: 0;}
+
+
+/* Text Elements */
+p			{color: #000; font-size:12px; line-height:150%}
+p.left		{margin:1.5em 1.5em 1.5em 0; padding:0;}
+p.right		{margin:1.5em 0 1.5em 1.5em; padding:0;}
+
+a			{	}
+a:link		{color: #00f;}
+a:visited	{color: #0f0;}
+a:active	{color: #000;}
+a:focus		{color: #666;}
+a:hover		{color: #f00;}
+
+blockquote	{color:#000; font-size:12px;}
+
+
+strong		{font-weight:bold;}
+em			{font-style: italic;}
+
+/*images */
+
+
+
+/* lists */
+
+ul		{ }
+ol		{ list-style-type:decimal;}
+
+ul li	{ color:#000; font-size:12px;}
+ol li	{color:#000; font-size:12px;}
+
+dl		{	}
+dt		{	}
+dd		{	}
+
+
+
+/*Tables */
+table			{width:100%;}
+
+tr				{ }
+.odd			{background-color:#eee;}
+.even			{background-color:#fff;}
+
+th				{font-weight:bold;}
+thead,th		{background: #ccc;}
+
+tbody			{	}
+
+th,td,caption	{ }
+caption			{	}
+
+tfoot			{	}
+.tfooter		{background-color:#ccc; text-align:center; font-style:italic;}
+
+caption			{background: #efefef;}
+
+
+
+
+/*Containers */
+
+
+#wrapper				{width:900px; height:1000px; margin:0px auto; background-color:white;	}
+
+
+#top					{background-color:white; width:100%; padding:20px 0px; overflow:hidden; }
+
+#logo					{margin:0 0 0 10px;	float:left;}
+
+#social-media			{float:right; margin:0 10px 0 0;	}
+#social-media p 		{color:#FF0066; font-size:11px; margin: 4px 10px 4px 0px; }
+#social-media img		{height:24px; width:24px;}
+#social-media ul li 	{display:inline;}
+
+
+#topnav					{background-color:#FF0066; clear:both;	}
+#topnav ul				{width:100%; float:left; margin:0; background-color:#ff0066; border-bottom:3px #87CAC4 solid; }
+#topnav ul li			{display:inline;}
+#topnav ul li a			{float:left; padding: 10px 20px;}
+
+#topnav a:link			{color:white;}
+#topnav a:visited		{color:white;}
+#topnav a:active		{color:#87CAC4;}
+#topnav a:hover			{color:white; background-color:blue;}
+#topnav a:focus			{color:white;}
+
+
+
+#banner			{	}
+
+#subbanner		{	}
+
+
+#content		{width:100%; padding:20px;	}
+#footer			{clear:both; background-color:#0877BC; padding:10px 0;	}
+#footer p		{text-align:center; color:white;}
+
+
+/* INDEX.HTML */
+
+#content-in		{float:left; width :50%; padding:10px;}
+#content-in h1 	{font-size:50px; font-family:"Edwardian Script ITC"; color:#EA0071; padding:10px; margin-left:10px; text-align:right; }
+
+#content-in h4 	{font-size:20px; font-family:"Edwardian Script ITC"; color:black; padding:10px; margin-left:10px; text-align:right}
+#content-in h4 a:link			{color:black; font-family:"Edwardian Script ITC";}
+#content-in h4 a:visited		{color:black; font-family:"Edwardian Script ITC";}
+#content-in h4 a:active		{color:black; font-family:"Edwardian Script ITC";}
+#content-in h4 a:hover			{color:white; background-color:blue; font-family:"Edwardian Script ITC";}
+#content-in h4 a:focus			{color:black; font-family:"Edwardian Script ITC";}
+
+
+#right-side 			{float:right; width:40%; padding:10px;}
+
+
+
+/* PERSONAL_DETAILS.HTML, Sign_up.html */
+
+#upper p		{text-align:center; font-size:30px; font-family:"Bell MT" ; color:black; font-style:italic;}
+
+
+
+/*About.html*/
+#about-content 		{padding: 10px; margin: 10px 20px;}
+#about-content h1	{padding: 10px; border-bottom:3px; border-bottom-color:#8BCDC9; border-bottom-style:solid;}
+#about-content p	{padding: 10px 40px; font-size:14px; text-align:justify; }
+
+
+
+/* LOG_OUT.HTML */
+#logout-content			{clear:both; padding:10px 0;}
+#logout-content h1		{text-align:center; color:blue; font-family:"Bell MT";}
+
+
+
+
+/* Layout Extra */
+
+
+/* Navigation Extra */
+
+
+/* Forms  */
+
+form {text-align:left; margin:20px}
+
+label, submit, input, textarea {
+			border:0; padding:0; margin:0; background:none;
+			}
+			
+label {float:left; width:150px;
+		text-align:right; display:block; margin-top:5px;}
+		
+
+input, textarea {
+		border:1px solid red; margin-left:10px; padding:5px; border-radius:2px;}
+		
+input {width:280px; margin-bottom:16px;}
+
+
+
+textarea {width:280px; height:150px;}	
+
+
+select 	{	}
+
+.submit	{width:90px; height:25px;
+		margin-left:150px;
+		font-size:12px;	}
+		
+		
+		
+		
+#contact-form ol {list-style-type:none;}	
+#right-side ol {list-style-type:none;}
+
+#signup-form	{padding:0px 300px; }	
+#signup-form ol {list-style-type:none;}	
+
+
+#personaldetails-form	{padding:0px 300px; }
+#personaldetails-form ol {list-style-type:none;	}
+
+#group4 li 	{margin-left:70px;}
+#group2 li	{display:inline;}
+
+
+
+
+
+
+
+	
+		
+		
+		
+		
+		
+		
+		
+
+
+
+/*Miscellaneous not used */
+
+.copyright-text	{font-size:80%; font-style:italic;color:#333;}
+.footer-text	{font-size:80%; font-style:normal; color:#666}
+
+.title			{font-size:18px; font-weight:bold; color#333}
+.subtitle		{font-size:14px; font-style:italic; color:#333}
+
+.artist			{font-size:16px; font-weight:bold; color:#333}
+.author			{font-size:14px; font-weight:bold; color:#555}
+.editor			{font-size:14px; font-style:italic; color:#555}
+
+.pub-date		{font-size:10px; font-style:italic; color:#555}
+.article-date	{font-size:10px; font-style:italic; color:#555}
+.location		{font-size:10px; font-style:italic; color:#555}
+
+
+.float-right	{float:right;}
+.float-left		{float:left;}
+.clear			{clear:both;}
+
+
+.hide			{display:none;}
+.block			{display:block;}
+.inline			{display:inline;}
+
+
+
+.first			{font-weight:bold;}
+.last			{font-weight:bold;}
+.left			{font-weight:bold; text-align:left;}
+.right			{font-weight:bold; text-align:right;}
+
+
+.added			{background:#d7d7ff;}
+.removed		{background:#ffcece; color:#f00}
+.changed		{background:#ffb}
+
+
+/*success, info, notice and error/ alert boxes- from blueprint css framework */
+.error, .alert, .notice, .success, .info {
+		padding:0.8em; margin-bottom:1em; border:2px solid #ddd;}
+		
+		.error, .alert	{background:#fbe3e4; color:#8a1f11; border-color:#fbc2c4}
+		
+		.notice		{background: #fff6bf; color:#514721; border-color:#ffd324}
+		
+		.success	{background:#e6efc2; color:#264409; border-color:#c6d880}
+		
+		.info		{background:#d5edf8; color:#205791; border-color:#92cae4}
+		
+		.error a	{color:#8a1f11;}
+		.alert a	{color:#8a1f11;}
+		
+		.notice a	{color:#514721;}
+		.success a	{color:#264409;}
+		.info a		{color:#205791;}
+
+
+
