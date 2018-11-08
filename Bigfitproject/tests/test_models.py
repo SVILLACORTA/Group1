@@ -1,3 +1,4 @@
+'''
 from Bigfit.models import User
 
 class TestUserModel:
@@ -12,3 +13,4 @@ class TestUserModel:
         assert user1.name == 'Tom'
         assert user1.password == 123456
         assert user1.email == 'Tom123@gmail.com'
+'''

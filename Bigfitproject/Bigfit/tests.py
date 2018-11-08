@@ -38,6 +38,3 @@ class testModel(TestCase):
         assert wt.weight == 123
 
 
-def test(request):
-    current_user = request.user
-    print(current_user.id)
