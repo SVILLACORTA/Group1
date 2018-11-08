@@ -23,11 +23,19 @@
 		    </div>
 		    <div id="topnav">
 			    <ul>
-                    <li><a href="{% url 'home' %}">Home</a></li>
-                                <li><a href="{% url 'register' %}">Sign Up</a></li>
-                    <li><a href="personal_details.html">Personal Details</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="{% url 'logout' %}">Log out</a></li>
+                        {% if request.session.is_login %}
+                            <li><a href="{% url 'home' %}">Home</a></li>
+                            <li><a href="{% url 'register' %}">Sign Up</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="{% url 'logout' %}">Log out</a></li>
+
+                        {% else %}
+                            <li><a href="{% url 'home' %}">Home</a></li>
+                            <li><a href="{% url 'register' %}">Sign Up</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="{% url 'login' %}">Login</a></li>
+                        {% endif %}
+
 			    </ul>
 		    </div>
             <div>
