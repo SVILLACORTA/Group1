@@ -1,9 +1,9 @@
-
 from django.shortcuts import render,redirect,HttpResponse
 from . import models
 from .forms import UserForm,RegisterForm,WeightinputForm
 from django.contrib.auth import login as guest_login,authenticate
 import datetime
+
 
 def index(request):
     pass
@@ -31,12 +31,13 @@ def login(request):
                     request.session['user_name'] = user.username
                     return redirect('/index/')
                 else:
-                    message = "Password is not correct.！"
+                    message = "Password is not correct！"
             except:
                 message = "User does not exist."
         return render(request, 'login.html', locals())
     login_form = UserForm()
     return render(request, 'login.html', locals())
+
 
 def register(request):
 
@@ -60,12 +61,12 @@ def register(request):
             gender = register_form.cleaned_data['gender']
 
             if password1 != password2:
-                message = "The password entered twice is different！"
+                message = "Passwords do not match！"
                 return render(request, 'register.html', locals())
             else:
                 same_name_user = models.User.objects.filter(username=username)
                 if same_name_user:
-                    message = 'The user already exists, please re-select the username!'
+                    message = 'The user already exists, please enter another username!'
                     return render(request, 'register.html', locals())
 
                 new_user = models.User.objects.create()
@@ -84,6 +85,7 @@ def register(request):
     register_form = RegisterForm()
     return render(request, 'register.html', locals())
 
+
 def logout(request):
     if not request.session.get('is_login', None):
         return redirect("/index/")
@@ -93,22 +95,19 @@ def logout(request):
     # del request.session['user_name']
     return redirect("/index/")
 
+
 def weightinput(request):
     if request.method == "POST":
         weightinput_form = WeightinputForm(request.POST)
         if weightinput_form.is_valid():
             cweight = weightinput_form.cleaned_data['current_weight']
-
-            new_weight = models.WeightTracker.objects.create()
-            new_weight.user_id = request.user.id
-            new_weight.weight = cweight
-            new_weight.save()
-
+            new_weight = models.WeightTracker.objects.create(weight=cweight, user=request.user)
             return redirect('/index/')
     weightinput_form = WeightinputForm
-    return render(request, 'weightinput.html',locals())
+    return render(request, 'weightinput.html', locals())
+
 
 def weighthistory(request):
     current_id = request.user.id
     weight_tracker_list_obj = models.WeightTracker.objects.filter(user_id=current_id)
-    return render(request, 'weighthistory.html',{'li':weight_tracker_list_obj})
+    return render(request, 'weighthistory.html', {'li': weight_tracker_list_obj})
