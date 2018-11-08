@@ -10,11 +10,18 @@
               {% csrf_token %}
               <h2 class="text-center">Welcome Login</h2>
  
-              {{ login_form }}
- 
+              <div class="form-group">
+                  {{ login_form.username.label_tag }}
+                  {{ login_form.username}}
+              </div>
+              <div class="form-group">
+                  {{ login_form.password.label_tag }}
+                  {{ login_form.password }}
+              </div>
+              <div class="button-group">
               <button type="reset" class="btn btn-default pull-left">reset</button>
               <button type="submit" class="btn btn-primary pull-right">submit</button>
- 
+              </div>
           </form>
         </div>
     </div> <!-- /container -->
