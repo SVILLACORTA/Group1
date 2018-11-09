@@ -6,6 +6,10 @@
         <link rel="stylesheet" id="bigfit-style-css" href="{% static 'style.css' %}" type="text/css" media="screen">
     </head>
     <body class="wide">
+        <style>
+            body
+            {background-image: url("{% static 'images/global-bkground.jpg' %}");}
+        </style>
         <div id="wrapper">
 		    <div id="top">
 			    <div id="logo">
@@ -24,16 +28,19 @@
 		    <div id="topnav">
 			    <ul>
                         {% if request.session.is_login %}
-                            <li><a href="{% url 'home' %}">Home</a></li>
+                            <li><a href="{% url 'home' %}">Welcome</a></li>
+                            <li><a href="/index/">Home</a></li>
                             <li><a href="{% url 'register' %}">Sign Up</a></li>
                             <li><a href="about.html">About</a></li>
                             <li><a href="{% url 'logout' %}">Log out</a></li>
 
                         {% else %}
-                            <li><a href="{% url 'home' %}">Home</a></li>
+                            <li><a href="{% url 'home' %}">Welcome</a></li>
+                            <li><a href="/index/">Home</a></li>
                             <li><a href="{% url 'register' %}">Sign Up</a></li>
                             <li><a href="about.html">About</a></li>
                             <li><a href="{% url 'login' %}">Login</a></li>
+
                         {% endif %}
 
 			    </ul>
