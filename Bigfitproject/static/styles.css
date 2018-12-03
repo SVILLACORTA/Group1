@@ -129,7 +129,7 @@ caption			{background: #efefef;}
 /*Containers */
 
 
-#wrapper				{width:900px; height:1000px; margin:0px auto; background-color:white;	}
+#wrapper				{width:1000px; height:1000px; margin:0px auto; background-color:white;	}
 
 
 #top					{background-color:white; width:100%; padding:20px 0px; overflow:hidden; }
@@ -161,6 +161,17 @@ caption			{background: #efefef;}
 
 
 #content		{width:100%; padding:20px;	}
+#content h1 	{font-size:50px; font-family:"Arial Rounded MT Bold" ; color:#0877BC; padding:10px; margin-left:10px; text-align:center; }
+#content ul		{padding:50px; margin:10px}
+#content li		{padding:20px; margin:10px; text-align:center;}
+#content ul li a		{font-size:30px; font-family:"Arial Rounded MT Bold"; color:#ff0066; padding:20px; margin-left:80px; text-align:center;}
+#content ul li a:link			{font-size:30px; font-family:"Arial Rounded MT Bold"; color:#ff0066;}
+#content ul li a:visited		{font-size:30px; font-family:"Arial Rounded MT Bold"; color:#ff0066;}
+#content ul li a:active		{font-size:30px; font-family:"Arial Rounded MT Bold"; color:#ff0066S;}
+#content ul li a:hover			{font-size:30px; color:#33CC33; font-family:"Arial Rounded MT Bold";}
+#content ul li a:focus			{font-size:30px; font-family:"Arial Rounded MT Bold"; color:#0877BC;}
+
+
 #footer			{clear:both; background-color:#0877BC; padding:10px 0;	}
 #footer p		{text-align:center; color:white;}
 
@@ -189,7 +200,7 @@ caption			{background: #efefef;}
 
 
 /*About.html*/
-#about-content 		{padding: 10px; margin: 10px 20px;}
+#about-content 		{padding: 30px; margin: 30px 20px;}
 #about-content h1	{padding: 10px; border-bottom:3px; border-bottom-color:#8BCDC9; border-bottom-style:solid;}
 #about-content p	{padding: 10px 40px; font-size:14px; text-align:justify; }
 

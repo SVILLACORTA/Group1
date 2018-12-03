@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>The Big Fit</title>
-        <link rel="stylesheet" id="bigfit-style-css" href="{% static 'style.css' %}" type="text/css" media="screen">
+        <link rel="stylesheet" id="bigfit-style-css" href="{% static 'styles.css' %}" type="text/css" media="screen">
     </head>
     <body class="wide">
         <style>
@@ -31,24 +31,30 @@
                             <li><a href="{% url 'home' %}">Welcome</a></li>
                             <li><a href="/index/">Home</a></li>
                             <li><a href="{% url 'register' %}">Sign Up</a></li>
-                            <li><a href="about.html">About</a></li>
+                            <li><a href="{% url 'about' %}">About</a></li>
                             <li><a href="{% url 'logout' %}">Log out</a></li>
 
                         {% else %}
                             <li><a href="{% url 'home' %}">Welcome</a></li>
                             <li><a href="/index/">Home</a></li>
                             <li><a href="{% url 'register' %}">Sign Up</a></li>
-                            <li><a href="about.html">About</a></li>
+                            <li><a href="{% url 'about' %}">About</a></li>
                             <li><a href="{% url 'login' %}">Login</a></li>
 
                         {% endif %}
 
 			    </ul>
 		    </div>
-            <div>
+
+
+
+
+            <div id="content">
                 {% block content %}
                 {% endblock %}
             </div>
+
+
             <div id="footer">
 			        <p>&copy;Copyright 2018 The Big Fit, Inc. All Rights Reserved </p>
             </div>
