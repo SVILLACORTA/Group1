@@ -12,6 +12,11 @@ class User(AbstractUser):
     gender = models.CharField(choices=SEX_CHOICES, max_length=1, null=True)
     zip_code = models.CharField(max_length=5, null=True)
 
+    @property
+    def totalInches(self):
+        totalInches = self.feet*12 + self.inches
+        return totalInches
+
     def __str__(self):
         return '%s, %s' % (self.last_name, self.first_name)
 
@@ -20,11 +25,31 @@ class User(AbstractUser):
 
 
 class WeightTracker(models.Model):
+
     user = models.ForeignKey('User', blank=True, null=True, on_delete=models.CASCADE)
     record_date = models.DateTimeField(auto_now_add=True)
     weight = models.PositiveSmallIntegerField(validators=[MaxValueValidator(999)])
     insert_date = models.DateTimeField(auto_now_add=True)
     update_date = models.DateTimeField(auto_now=True)
+
+    @property
+    def bmi(self):
+        inches = self.user.totalInches
+        weight = self.weight
+        bmi = round((weight / (inches * inches)) * 703.0, 1)
+        return bmi
+
+    def weightStatus(self):
+        status = None
+        if self.bmi <= 18.5:
+            status = "Underweight"
+        elif 18.5 <= self.bmi <= 24.9:
+            status = "Normal weight"
+        elif 25 <= self.bmi <= 29.9:
+            status = "Overweight"
+        elif self.bmi >= 30:
+            status = "Obese"
+        return status
 
     def __str__(self):
         return str(self.weight)
