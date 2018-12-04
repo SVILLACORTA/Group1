@@ -1,13 +1,12 @@
 {% extends 'base.html' %}
 {% block title %}Weight History{% endblock %}
 {% block content %}
-    <html>
-    <body>
+
         <table border="1">
             <tr>
-                <th>user</th>
-                <th>weight</th>
-                <th>record date</th>
+                <th>User</th>
+                <th>Weight</th>
+                <th>Record date</th>
             </tr>
             {% for item in li %}
             <tr>
@@ -17,6 +16,5 @@
             </tr>
             {% endfor %}
         </table>
-    </body>
-    </html>
+
 {% endblock %}

@@ -104,7 +104,7 @@ dd		{	}
 
 
 /*Tables */
-table			{width:100%;}
+table			{width:95%;}
 
 tr				{ }
 .odd			{background-color:#eee;}
@@ -129,7 +129,7 @@ caption			{background: #efefef;}
 /*Containers */
 
 
-#wrapper				{width:900px; height:1000px; margin:0px auto; background-color:white;	}
+#wrapper				{width:1000px; height:1000px; margin:0px auto; background-color:white;	}
 
 
 #top					{background-color:white; width:100%; padding:20px 0px; overflow:hidden; }
@@ -159,13 +159,37 @@ caption			{background: #efefef;}
 
 #subbanner		{	}
 
-
+/* INDEX.HTML */
 #content		{width:100%; padding:20px;	}
+#content h1 	{font-size:50px; font-family:"Arial Rounded MT Bold" ; color:#0877BC; padding:10px; margin-left:10px; text-align:center; }
+#content ul		{}
+#content li		{padding:10px; text-align:center; font-size:20px; font-family:"Arial Rounded MT Bold"}
+#content ul li a		{font-size:30px; font-family:"Arial Rounded MT Bold"; color:#ff0066; margin-left:40px; text-align:center;}
+#content ul li a:link			{font-size:30px; font-family:"Arial Rounded MT Bold"; color:#ff0066;}
+#content ul li a:visited		{font-size:30px; font-family:"Arial Rounded MT Bold"; color:#ff0066;}
+#content ul li a:active		{font-size:30px; font-family:"Arial Rounded MT Bold"; color:#ff0066S;}
+#content ul li a:hover			{font-size:30px; color:#33CC33; font-family:"Arial Rounded MT Bold";}
+#content ul li a:focus			{font-size:30px; font-family:"Arial Rounded MT Bold"; color:#0877BC;}
+
+
+#content table {width:95%;}
+#content th		{font-weight:bold; font-family: "Arial Rounded MT Bold"; color:#ffffff;}
+#content thead,th		{background:#0877BC;}
+#content td    { padding:5px 5px; font-family: "Arial Rounded MT Bold"; font-size:15px;}
+
+tbody			{	}
+
+th,td,caption	{ }
+caption			{	}
+
+tfoot			{	}
+
+
 #footer			{clear:both; background-color:#0877BC; padding:10px 0;	}
 #footer p		{text-align:center; color:white;}
 
 
-/* INDEX.HTML */
+/* not used.HTML */
 
 #content-in		{float:left; width :50%; padding:10px;}
 #content-in h1 	{font-size:50px; font-family:"Edwardian Script ITC"; color:#EA0071; padding:10px; margin-left:10px; text-align:right; }
@@ -189,7 +213,7 @@ caption			{background: #efefef;}
 
 
 /*About.html*/
-#about-content 		{padding: 10px; margin: 10px 20px;}
+#about-content 		{padding: 30px; margin: 30px 20px;}
 #about-content h1	{padding: 10px; border-bottom:3px; border-bottom-color:#8BCDC9; border-bottom-style:solid;}
 #about-content p	{padding: 10px 40px; font-size:14px; text-align:justify; }
 
