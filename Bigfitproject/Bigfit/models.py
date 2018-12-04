@@ -31,3 +31,17 @@ class WeightTracker(models.Model):
 
     class Meta:
         ordering = ['user', 'record_date']
+
+
+class CalorieTracker(models.Model):
+    user = models.ForeignKey('User', blank=True, null=True, on_delete=models.CASCADE)
+    record_date = models.DateTimeField(auto_now_add=True)
+    calories = models.PositiveSmallIntegerField(validators=[MaxValueValidator(99999)])
+    insert_date = models.DateTimeField(auto_now_add=True)
+    update_date = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return str(self.calories)
+
+    class Meta:
+        ordering = ['user', 'record_date']
