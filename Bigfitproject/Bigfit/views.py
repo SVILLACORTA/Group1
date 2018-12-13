@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, HttpResponse
-from Bigfit.models import WeightTracker, User
+from Bigfit.models import WeightTracker, User, CalorieTracker
 from . import models
 from .forms import UserForm,RegisterForm, WeightinputForm, CalorieinputForm
 from django.contrib.auth import login as guest_login, authenticate
@@ -35,8 +35,6 @@ def index(request):
         data['label'] = time
         data['value'] = key.weight
         dataSource1['data'].append(data)
-
-
     dataSource1['trendlines'] = []
     trendlines = {}
     trendlines['line'] = []
@@ -51,8 +49,26 @@ def index(request):
         trendlines['line'].append(line)
     dataSource1['trendlines'].append(trendlines)
 
-    line1 = FusionCharts("line", "myFirstChart", "900", "500", "chart1", "json", dataSource1)
-    return render(request, 'index.html', {'output1': line1.render()})
+    dataSource2 = {}
+    dataSource2['chart'] = {
+        "caption": "Daily Calorie Report",
+        "xAxisName": "Record Date",
+        "yAxisName": "Calorie",
+        "numberSuffix": "kcals",
+        "theme": "fusion",
+        'bgColor':'#bdbdbd'
+    }
+    dataSource2['data'] = []
+    for key in CalorieTracker.objects.filter(user_id=current_id):
+        data = {}
+        time = datetime.datetime.strftime(key.record_date, '%m-%d')
+        data['label'] = time
+        data['value'] = key.calories
+        dataSource2['data'].append(data)
+
+    line1 = FusionCharts("line", "myFirstChart", "450", "250", "chart1", "json", dataSource1)
+    line2 = FusionCharts("line", "mySecondChart", "450", "250", "chart2", "json", dataSource2)
+    return render(request, 'index.html', {'output1': line1.render(),'output2':line2.render()})
 
 
 def login(request):
