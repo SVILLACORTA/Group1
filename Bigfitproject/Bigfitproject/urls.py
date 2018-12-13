@@ -25,9 +25,13 @@ urlpatterns = [
     #path('register/', views.register, name='register page'),
     #path('logout/', views.logout),
     path('weightinput/', views.weightinput),
+    path('calorieinput/', views.calorieinput),
     path('weighthistory/', views.weighthistory),
+    path('caloriehistory/', views.caloriehistory),
     path('viewprofile/', views.viewprofile),
-    path('delete/', views.deleteweighthistory),
+    path('deleteweight/', views.deleteweighthistory),
+    path('deletecalorie/', views.deletecaloriehistory),
+    path('editcalorie/', views.editcaloriehistory),
     path('editweight/', views.editweighthistory),
     url(r'^admin/', admin.site.urls),
     url(r'^home/', views.home, name='home'),
@@ -42,7 +46,7 @@ urlpatterns = [
     path('editinches/', views.editinches),
     path('editzipcode/', views.editzipcode),
     path('editdob/', views.editdob),
-    path('editpassword/', views.editpassword),
+    path('editpassword/', views.editpassword)
 
 
 ]

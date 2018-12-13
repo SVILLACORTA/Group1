@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ee47660-7b68-44ec-8d52-7a6c61366824" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Group1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Group1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bigfitproject/Bigfit/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bigfitproject/Bigfit/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bigfitproject/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Bigfitproject/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bigfitproject/templates/weighthistory.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bigfitproject/templates/weighthistory.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Group1$main.coverage" NAME="main Coverage Results" MODIFIED="1539623016246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bigfitproject/Bigfit" />
+    <SUITE FILE_PATH="coverage/Group1$main.coverage" NAME="main Coverage Results" MODIFIED="1544681586321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bigfitproject/Bigfit" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -99,11 +96,11 @@
     <session id="-1587270199">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.0" value="1" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -114,6 +111,16 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="1136" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Python" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -160,7 +167,15 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Bigfitproject/Bigfit/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3395" />
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -201,37 +216,25 @@
         <subPane>
           <expand>
             <path>
-              <item name="BigFit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigFit" type="462c0819:PsiDirectoryNode" />
+              <item name="Group1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Group1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="BigFit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigFit" type="462c0819:PsiDirectoryNode" />
+              <item name="Group1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Group1" type="462c0819:PsiDirectoryNode" />
               <item name="Bigfitproject" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="BigFit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigFit" type="462c0819:PsiDirectoryNode" />
+              <item name="Group1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Group1" type="462c0819:PsiDirectoryNode" />
               <item name="Bigfitproject" type="462c0819:PsiDirectoryNode" />
               <item name="Bigfit" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="BigFit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigFit" type="462c0819:PsiDirectoryNode" />
+              <item name="Group1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Group1" type="462c0819:PsiDirectoryNode" />
               <item name="Bigfitproject" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BigFit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigFit" type="462c0819:PsiDirectoryNode" />
               <item name="Bigfitproject" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BigFit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BigFit" type="462c0819:PsiDirectoryNode" />
-              <item name="Bigfitproject" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -247,6 +250,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -303,14 +307,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="11" width="1358" height="778" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2511556" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25373134" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3287037" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32778355" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -319,7 +323,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32868218" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32882413" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.3287037" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -372,9 +376,6 @@
     <entry file="file://$PROJECT_DIR$/Bigfitproject/Bigfit/apps.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Bigfitproject/Bigfit/views.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Bigfitproject/tests/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -384,13 +385,7 @@
     <entry file="file://$PROJECT_DIR$/Bigfitproject/Bigfit/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../BigFit - Copy/weightTracker/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../BigFit - Copy/weightTracker/tests.py" />
     <entry file="file://$PROJECT_DIR$/Bigfitproject/tests/test_url.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -450,11 +445,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="809">
           <caret line="50" column="22" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
-          <folding>
-            <marker date="1543947536041" expanded="true" signature="719:801" ph="..." />
-            <marker date="1543947536041" expanded="true" signature="1851:1856" ph="..." />
-          </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bigfitproject/Bigfit/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3395" />
       </provider>
     </entry>
   </component>
