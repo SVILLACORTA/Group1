@@ -1,9 +1,17 @@
 {% extends 'base.html' %}
 {% block title %}Edit Weight{% endblock %}
 {% block content %}
+
+    <div id = "content">
+    <p>Fix {{ request.session.user_name }}'s Weight </p>
+</div>
     <form action="?nid={{ obj.id }}" method="POST">
         {% csrf_token %}
     <input type="text" name="title" value="{{ obj.weight }}" />
     <input type="submit" value="Submit"/>
     </form>
+
+                <ul>
+         <li><a href="/weighthistory/">Back</a></li>
+    </ul>
 {% endblock %}

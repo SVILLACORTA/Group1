@@ -28,6 +28,7 @@
 		    <div id="topnav">
 			    <ul>
                         {% if request.session.is_login %}
+                            <li><a href="{% url 'home' %}">Welcome</a></li>
                             <li><a href="/index/">Home</a></li>
                             <li><a href="{% url 'about' %}">About</a></li>
                             <li><a href="{% url 'logout' %}">Log out</a></li>
