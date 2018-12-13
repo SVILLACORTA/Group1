@@ -26,10 +26,22 @@ urlpatterns = [
     #path('logout/', views.logout),
     path('weightinput/', views.weightinput),
     path('weighthistory/', views.weighthistory),
+    path('viewprofile/', views.viewprofile),
+    path('delete/', views.deleteweighthistory),
+    path('editweight/', views.editweighthistory),
     url(r'^admin/', admin.site.urls),
     url(r'^home/', views.home, name='home'),
     url(r'^login/', views.login, name='login'),
     url(r'^register/', views.register, name='register'),
     url(r'^about/', views.about, name='about'),
-    url(r'^logout/', views.logout, name='logout')
+    url(r'^logout/', views.logout, name='logout'),
+    path('editusername/', views.editusername),
+    path('editgender/', views.editgender),
+    path('edittargetweight/', views.edittargetweight),
+    path('editfeet/', views.editfeet),
+    path('editinches/', views.editinches),
+    path('editzipcode/', views.editzipcode),
+    path('editdob/', views.editdob),
+    path('editpassword/', views.editpassword)
+
 ]

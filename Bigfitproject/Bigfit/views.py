@@ -11,11 +11,14 @@ def home(request):
 def about(request):
     return render(request, 'about.html')
 
+def viewprofile(request):
+    current_id = request.user.id
+    profile_list = models.User.objects.filter(id=current_id)
+    return render(request,'profile.html',{'uli':profile_list})
 
 def index(request):
     pass
     return render(request, 'index.html')
-
 
 def login(request):
 
@@ -44,7 +47,6 @@ def login(request):
         return render(request, 'login.html', locals())
     login_form = UserForm()
     return render(request, 'login.html', locals())
-
 
 def register(request):
 
@@ -92,7 +94,6 @@ def register(request):
     register_form = RegisterForm()
     return render(request, 'register.html', locals())
 
-
 def logout(request):
     if not request.session.get('is_login', None):
         return redirect("/index/")
@@ -101,7 +102,6 @@ def logout(request):
     # del request.session['user_id']
     # del request.session['user_name']
     return redirect("/index/")
-
 
 def weightinput(request):
     if request.method == "POST":
@@ -113,8 +113,118 @@ def weightinput(request):
     weightinput_form = WeightinputForm
     return render(request, 'weightinput.html', locals())
 
-
 def weighthistory(request):
     current_id = request.user.id
     weight_tracker_list_obj = models.WeightTracker.objects.filter(user_id=current_id)
     return render(request, 'weighthistory.html', {'li': weight_tracker_list_obj})
+
+def deleteweighthistory(request):
+    cid = request.user.id
+    nid = request.GET.get('nid')
+    models.WeightTracker.objects.filter(user_id=cid, id=nid).delete()
+    return redirect('/index/')
+
+def editweighthistory(request):
+    if request.method == 'GET':
+        nid = request.GET.get('nid')
+        obj = models.WeightTracker.objects.filter(id=nid).first()
+        return render(request, 'editweight.html', {'obj': obj})
+    elif request.method == 'POST':
+        cid = request.user.id
+        nid = request.GET.get('nid')
+        uweight = request.POST.get('title')
+        models.WeightTracker.objects.filter(user_id=cid, id=nid).update(weight=uweight)
+        return redirect('/index/')
+
+def editusername(request):
+    if request.method == 'GET':
+        cid = request.user.id
+        obj = models.User.objects.filter(id=cid).first()
+        return render(request, 'editusername.html', {'obj': obj})
+    elif request.method == 'POST':
+        cid = request.user.id
+        username = request.POST.get('username')
+        models.User.objects.filter(id=cid).update(username=username)
+        return redirect('/index/')
+
+def edittargetweight(request):
+    if request.method == 'GET':
+        cid = request.user.id
+        obj = models.User.objects.filter(id=cid).first()
+        return render(request, 'edittargetweight.html', {'obj': obj})
+    elif request.method == 'POST':
+        cid = request.user.id
+        targetweight = request.POST.get('targetweight')
+        models.User.objects.filter(id=cid).update(target_weight=targetweight)
+        return redirect('/index/')
+
+def editgender(request):
+    if request.method == 'GET':
+        cid = request.user.id
+        obj = models.User.objects.filter(id=cid).first()
+        return render(request, 'editgender.html', {'obj': obj})
+    elif request.method == 'POST':
+        cid = request.user.id
+        gender = request.POST.get('gender')
+        models.User.objects.filter(id=cid).update(gender=gender)
+        return redirect('/index/')
+
+def editfeet(request):
+    if request.method == 'GET':
+        cid = request.user.id
+        obj = models.User.objects.filter(id=cid).first()
+        return render(request, 'editfeet.html', {'obj': obj})
+    elif request.method == 'POST':
+        cid = request.user.id
+        feet = request.POST.get('feet')
+        models.User.objects.filter(id=cid).update(feet=feet)
+        return redirect('/index/')
+
+def editinches(request):
+    if request.method == 'GET':
+        cid = request.user.id
+        obj = models.User.objects.filter(id=cid).first()
+        return render(request, 'editinches.html', {'obj': obj})
+    elif request.method == 'POST':
+        cid = request.user.id
+        inches = request.POST.get('inches')
+        models.User.objects.filter(id=cid).update(inches=inches)
+        return redirect('/index/')
+
+def editzipcode(request):
+    if request.method == 'GET':
+        cid = request.user.id
+        obj = models.User.objects.filter(id=cid).first()
+        return render(request, 'editzipcode.html', {'obj': obj})
+    elif request.method == 'POST':
+        cid = request.user.id
+        zipcode = request.POST.get('zipcode')
+        models.User.objects.filter(id=cid).update(zip_code=zipcode)
+        return redirect('/index/')
+
+def editdob(request):
+    if request.method == 'GET':
+        cid = request.user.id
+        obj = models.User.objects.filter(id=cid).first()
+        return render(request, 'editdob.html', {'obj': obj})
+    elif request.method == 'POST':
+        cid = request.user.id
+        dob = request.POST.get('dob')
+        models.User.objects.filter(id=cid).update(date_of_birth=dob)
+        return redirect('/index/')
+
+def editpassword(request):
+    if request.method == 'GET':
+        cid = request.user.id
+        obj = models.User.objects.filter(id=cid).first()
+        return render(request, 'editpassword.html', {'obj': obj})
+    elif request.method == 'POST':
+        cid = request.user.id
+        pw1 = request.POST.get('password1')
+        pw2 = request.POST.get('password2')
+        if pw1 == pw2:
+            models.User.objects.filter(id=cid).update(password=pw1)
+            return redirect('/index/')
+        else:
+            message = "Passwords do not match！"
+            return render(request,'editpassword.html',locals())

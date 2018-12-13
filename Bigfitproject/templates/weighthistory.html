@@ -4,17 +4,25 @@
 
         <table border="1">
             <tr>
+                <th>ID</th>th>
                 <th>Record date</th>
                 <th>Weight</th>
                 <th>BMI</th>
                 <th>Weight Status</th>
+                <th>Process</th>
             </tr>
             {% for item in li %}
             <tr>
+                <td>{{ item.id }}
                 <td>{{ item.record_date }}</td>
                 <td>{{ item.weight }}</td>
                 <td>{{ item.bmi }}</td>
                 <td>{{ item.weightStatus }}</td>
+                <td>
+                    <a href="/delete?nid={{ item.id }}">Delete</a>
+                    |
+                    <a href="/editweight?nid={{ item.id }}">Edit</a>
+                </td>
             </tr>
             {% endfor %}
         </table>
