@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}Register{% endblock %}
+{% block content %}
+    <form action="?cid={{ obj.id }}" method="POST">
+        {% csrf_token %}
+    <input type="text" name="inches" value="{{ obj.inches }}" />
+    <input type="submit" value="Submit"/>
+    </form>
+{% endblock %}

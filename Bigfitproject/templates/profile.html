@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block title %}main page{% endblock %}
+{% block content %}
+
+    <table border="1">
+        <tr>
+            <th>Username</th>
+            <th>Gender</th>
+            <th>Target Weight</th>
+            <th>Feet</th>
+            <th>Inches</th>
+            <th>Zip Code</th>
+            <th>Date of Birth</th>
+        </tr>
+            {% for item in uli %}
+                <tr>
+                    <td>
+                        {{ item.username }}
+                        |
+                        <a href="/editusername">Edit</a>
+                    </td>
+                    <td>
+                        {{ item.gender }}
+                        |
+                        <a href="/editgender">Edit</a>
+                    </td>
+                    <td>
+                        {{ item.target_weight }}
+                        |
+                        <a href="/edittargetweight">Edit</a>
+                    </td>
+                    <td>
+                        {{ item.feet }}
+                        |
+                        <a href="/editfeet">Edit</a>
+                    </td>
+                    <td>
+                        {{ item.inches }}
+                        |
+                        <a href="/editinches">Edit</a>
+                    </td>
+                    <td>
+                        {{ item.zip_code }}
+                        |
+                        <a href="/editzipcode">Edit</a>
+                    </td>
+                    <td>
+                        {{ item.date_of_birth }}
+                        |
+                        <a href="/editdob">Edit</a>
+                    </td>
+                </tr>
+            {% endfor %}
+    </table>
+    <ul>
+        <li><a href="/editpassword/">Edit Password</a></li>
+
+    </ul>
+{% endblock %}
