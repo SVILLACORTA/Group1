@@ -189,7 +189,7 @@ tfoot			{	}
 #footer p		{text-align:center; color:white;}
 
 
-/* not used.HTML */
+/* unused.HTML */
 
 #content-in		{float:left; width :50%; padding:10px;}
 #content-in h1 	{font-size:50px; font-family:"Edwardian Script ITC"; color:#EA0071; padding:10px; margin-left:10px; text-align:right; }
@@ -202,7 +202,13 @@ tfoot			{	}
 #content-in h4 a:focus			{color:black; font-family:"Edwardian Script ITC";}
 
 
-#right-side 			{float:right; width:40%; padding:10px;}
+/* home.HTML */
+#clear			{clear:both; padding:10px;}
+
+#home-left		{float:left; width :25%; padding:10px;}
+
+#home-right 			{float:right; width:45%; margin-right:40px; margin-top:10px; padding:5px;}
+#home-right p			{margin-right:10px; padding:10px; border:3px #87CAC4 solid ; font-size:16px; font-style:oblique;}
 
 
 
