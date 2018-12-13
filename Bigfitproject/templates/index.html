@@ -1,14 +1,26 @@
 
 {% extends 'base.html' %}
-{% block title %}main page{% endblock %}
+{% block title %}Main Page{% endblock %}
 {% block content %}
     {% if request.session.is_login %}
     <h1>Hello,{{ request.session.user_name }}！Welcome back！</h1>
         <ul>
             <li><a href="/viewprofile/">View Profile</a></li>
             <li><a href="/weightinput/">Input Weight</a></li>
+            <li><a href="/calorieinput/">Input Calorie</a></li>
             <li><a href="/weighthistory/">Visit WeightHistory</a></li>
+            <li><a href="/caloriehistory/">Visit CalorieHistory</a></li>
 
+        </ul>
+        <ul>
+            <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+            <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+        </ul>
+        <ul>
+            <div id="chart1">{{ output1|safe }}</div>
+        </ul>
+        <ul>
+            <div id="chart2">{{ output2|safe }}</div>
         </ul>
     {% else %}
     <h1>You are not currently online, you can only access the public page.</h1>

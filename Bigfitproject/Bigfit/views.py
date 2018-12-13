@@ -1,10 +1,10 @@
 from django.shortcuts import render, redirect, HttpResponse
+from Bigfit.models import WeightTracker, User
 from . import models
-from .forms import UserForm,RegisterForm, WeightinputForm
+from .forms import UserForm,RegisterForm, WeightinputForm, CalorieinputForm
 from django.contrib.auth import login as guest_login, authenticate
 import datetime
-import sqlite3
-import json
+from Bigfitproject.fusioncharts import FusionCharts
 
 def home(request):
     return render(request, 'home.html')
@@ -18,8 +18,44 @@ def viewprofile(request):
     return render(request,'profile.html',{'uli':profile_list})
 
 def index(request):
-    pass
-    return render(request, 'index.html')
+    current_id = request.user.id
+    dataSource1 = {}
+    dataSource1['chart'] = {
+        "caption": "Daily Weight Report",
+        "xAxisName": "Record Date",
+        "yAxisName": "Weight",
+        "numberSuffix": "lbs",
+        "theme": "fusion"
+    }
+    dataSource1['data'] = []
+    for key in WeightTracker.objects.filter(user_id=current_id):
+        data = {}
+        time = datetime.datetime.strftime(key.record_date, '%m-%d')
+        data['label'] = time
+        data['value'] = key.weight
+        dataSource1['data'].append(data)
+
+    line1 = FusionCharts("line", "myFirstChart", "900", "500", "chart1", "json", dataSource1)
+    return render(request, 'index.html', {'output1': line1.render()})
+
+    dataSource2 = {}
+    dataSource2['chart'] = {
+        "caption": "Daily Calorie Report",
+        "xAxisName": "Record Date",
+        "yAxisName": "Calorie",
+        "numberSuffix": "kcal",
+        "theme": "fusion"
+    }
+    dataSource2['data'] = []
+    for key in CalorieTracker.objects.filter(user_id=current_id):
+        data = {}
+        time = datetime.datetime.strftime(key.record_date, '%m-%d')
+        data['label'] = time
+        data['value'] = key.calories
+        dataSource1['data'].append(data)
+
+    line2 = FusionCharts("line", "myFirstChart", "900", "400", "chart1", "json", dataSource2)
+    return render(request, 'index.html', {'output2': line2.render()})
 
 def login(request):
 
@@ -230,15 +266,35 @@ def editpassword(request):
             message = "Passwords do not match！"
             return render(request,'editpassword.html',locals())
 
-def createchart(request):
-    connection = sqlite3.connect('db.sqlite3')
-    cursor = connection.cursor()
-    query = 'SELECT id,weight,user_id  FROM Bigfit_weighttracker'
-    result = cursor.execute(query)
-    weighttable = []
+def calorieinput(request):
+    if request.method == "POST":
+        calorieinput_form = CalorieinputForm(request.POST)
+        if calorieinput_form.is_valid():
+            ccalorie = calorieinput_form.cleaned_data['current_calorie']
+            new_calorie = models.CalorieTracker.objects.create(calories=ccalorie, user=request.user)
+            return redirect('/index/')
+    calorieinput_form = CalorieinputForm
+    return render(request, 'calorieinput.html', locals())
+
+def caloriehistory(request):
     current_id = request.user.id
-    for row in result:
-        if row[2] == current_id:
-            weighttable.append({'id': row[0], 'weight': row[1], 'user_id': row[2]})
-    connection.close()
-    print(json.dumps({'weighttable': weighttable}))
+    weight_tracker_list_obj = models.CalorieTracker.objects.filter(user_id=current_id)
+    return render(request, 'caloriehistory.html', {'li': weight_tracker_list_obj})
+
+def deletecaloriehistory(request):
+    cid = request.user.id
+    nid = request.GET.get('nid')
+    models.CalorieTracker.objects.filter(user_id=cid, id=nid).delete()
+    return redirect('/index/')
+
+def editcaloriehistory(request):
+    if request.method == 'GET':
+        nid = request.GET.get('nid')
+        obj = models.CalorieTracker.objects.filter(id=nid).first()
+        return render(request, 'editcalorie.html', {'obj': obj})
+    elif request.method == 'POST':
+        cid = request.user.id
+        nid = request.GET.get('nid')
+        ucalorie = request.POST.get('title')
+        models.CalorieTracker.objects.filter(user_id=cid, id=nid).update(calories=ucalorie)
+        return redirect('/index/')

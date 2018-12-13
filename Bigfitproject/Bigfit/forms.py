@@ -25,3 +25,6 @@ class RegisterForm(forms.Form):
 
 class WeightinputForm(forms.Form):
     current_weight = forms.IntegerField(label="Current Weight")
+
+class CalorieinputForm(forms.Form):
+    current_calorie = forms.IntegerField(label="Current Calorie")
