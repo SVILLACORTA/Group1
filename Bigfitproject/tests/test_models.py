@@ -33,7 +33,6 @@ class testModel(TestCase):
         user = self.create_user()
         wt = WeightTracker.objects.create(weight=123, user=user)
         wt.save()
-
         self.assertTrue(isinstance(wt, WeightTracker))
         assert wt.weight == 123
 
@@ -41,6 +40,12 @@ class testModel(TestCase):
         user = self.create_user()
         ct = CalorieTracker.objects.create(calories=2300, user=user)
         ct.save()
-
         self.assertTrue(isinstance(ct, CalorieTracker))
         assert ct.calories == 2300
+
+    def test_bmi(self):
+        user = self.create_user()
+        wt = WeightTracker.objects.create(weight=123, user=user)
+        wt.save()
+        assert wt.bmi == 21.1
+
