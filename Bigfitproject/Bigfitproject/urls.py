@@ -39,14 +39,14 @@ urlpatterns = [
     url(r'^register/', views.register, name='register'),
     url(r'^about/', views.about, name='about'),
     url(r'^logout/', views.logout, name='logout'),
-    path('editusername/', views.editusername),
-    path('editgender/', views.editgender),
+    path('editusername/', views.editusername, name='editusername'),
+    path('editgender/', views.editgender, name='editgender'),
     path('edittargetweight/', views.edittargetweight),
     path('editfeet/', views.editfeet),
     path('editinches/', views.editinches),
     path('editzipcode/', views.editzipcode),
     path('editdob/', views.editdob),
-    path('editpassword/', views.editpassword)
+    path('editpassword/', views.editpassword, name='editpassword')
 
 
 ]

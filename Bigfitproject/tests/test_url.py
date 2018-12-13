@@ -3,12 +3,12 @@ from django.urls import reverse, resolve
 class TestUrls:
 
     def test_login_url(self):
-        path = reverse('login page')
-        assert resolve(path).view_name == 'login page'
+        path = reverse('login')
+        assert resolve(path).view_name == 'login'
 
     def test_register_url(self):
-        path = reverse('register page')
-        assert resolve(path).view_name == 'register page'
+        path = reverse('register')
+        assert resolve(path).view_name == 'register'
 
     def test_index_url(self):
         path = reverse('index page')
