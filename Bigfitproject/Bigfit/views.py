@@ -3,7 +3,8 @@ from . import models
 from .forms import UserForm,RegisterForm, WeightinputForm
 from django.contrib.auth import login as guest_login, authenticate
 import datetime
-
+import sqlite3
+import json
 
 def home(request):
     return render(request, 'home.html')
@@ -228,3 +229,16 @@ def editpassword(request):
         else:
             message = "Passwords do not match！"
             return render(request,'editpassword.html',locals())
+
+def createchart(request):
+    connection = sqlite3.connect('db.sqlite3')
+    cursor = connection.cursor()
+    query = 'SELECT id,weight,user_id  FROM Bigfit_weighttracker'
+    result = cursor.execute(query)
+    weighttable = []
+    current_id = request.user.id
+    for row in result:
+        if row[2] == current_id:
+            weighttable.append({'id': row[0], 'weight': row[1], 'user_id': row[2]})
+    connection.close()
+    print(json.dumps({'weighttable': weighttable}))
