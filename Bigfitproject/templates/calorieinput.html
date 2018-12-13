@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 {% block title %}Calorie Input{% endblock %}
 {% block content %}
+        <div id = "content">
+    <p>{{ request.session.user_name }} Enter Your Calories for Today!</p>
+</div>
     <div class="container">
         <div class="col-md-4 col-md-offset-4">
           <form class='form-calorieinput' action="/calorieinput/" method="post">
@@ -15,4 +18,8 @@
           </form>
         </div>
     </div>
+
+        <ul>
+         <li><a href="/index/">Back</a></li>
+    </ul>
 {% endblock %}

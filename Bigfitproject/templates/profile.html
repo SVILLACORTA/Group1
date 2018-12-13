@@ -2,6 +2,10 @@
 {% block title %}main page{% endblock %}
 {% block content %}
 
+        <div id = "content">
+    <p>{{ request.session.user_name }}'s Profile </p>
+</div>
+
     <table border="1">
         <tr>
             <th>Username</th>

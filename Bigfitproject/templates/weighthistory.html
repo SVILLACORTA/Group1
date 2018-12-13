@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 {% block title %}Weight History{% endblock %}
 {% block content %}
+        <div id = "content">
+    <p>{{ request.session.user_name }}'s Weight History </p>
+</div>
 
         <table border="1">
             <tr>
@@ -27,10 +30,8 @@
             {% endfor %}
         </table>
     <ul>
-        <li><a href="/editpassword/">Edit Password</a></li>
+
          <li><a href="/index/">Back</a></li>
-
-
     </ul>
 
 {% endblock %}
