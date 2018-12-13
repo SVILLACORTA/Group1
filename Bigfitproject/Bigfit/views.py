@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, HttpResponse
-from Bigfit.models import WeightTracker, User
+from Bigfit.models import WeightTracker, User, CalorieTracker
 from . import models
 from .forms import UserForm,RegisterForm, WeightinputForm, CalorieinputForm
 from django.contrib.auth import login as guest_login, authenticate
@@ -25,7 +25,8 @@ def index(request):
         "xAxisName": "Record Date",
         "yAxisName": "Weight",
         "numberSuffix": "lbs",
-        "theme": "fusion"
+        "theme": "fusion",
+        'bgColor':'#bdbdbd'
     }
     dataSource1['data'] = []
     for key in WeightTracker.objects.filter(user_id=current_id):
@@ -34,17 +35,28 @@ def index(request):
         data['label'] = time
         data['value'] = key.weight
         dataSource1['data'].append(data)
-
-    line1 = FusionCharts("line", "myFirstChart", "900", "500", "chart1", "json", dataSource1)
-    return render(request, 'index.html', {'output1': line1.render()})
+    dataSource1['trendlines'] = []
+    trendlines = {}
+    trendlines['line'] = []
+    for key in User.objects.filter(id=current_id):
+        tw = str(key.target_weight)
+        line = {}
+        line['startvalue'] = tw
+        line['displayvalue'] = "Target{br}Weight"
+        line['color'] = "#1aaf5d"
+        line["valueOnRight"] = '1'
+        line['thickness'] = '2'
+        trendlines['line'].append(line)
+    dataSource1['trendlines'].append(trendlines)
 
     dataSource2 = {}
     dataSource2['chart'] = {
         "caption": "Daily Calorie Report",
         "xAxisName": "Record Date",
         "yAxisName": "Calorie",
-        "numberSuffix": "kcal",
-        "theme": "fusion"
+        "numberSuffix": "kcals",
+        "theme": "fusion",
+        'bgColor':'#bdbdbd'
     }
     dataSource2['data'] = []
     for key in CalorieTracker.objects.filter(user_id=current_id):
@@ -52,10 +64,12 @@ def index(request):
         time = datetime.datetime.strftime(key.record_date, '%m-%d')
         data['label'] = time
         data['value'] = key.calories
-        dataSource1['data'].append(data)
+        dataSource2['data'].append(data)
 
-    line2 = FusionCharts("line", "myFirstChart", "900", "400", "chart1", "json", dataSource2)
-    return render(request, 'index.html', {'output2': line2.render()})
+    line1 = FusionCharts("line", "myFirstChart", "450", "250", "chart1", "json", dataSource1)
+    line2 = FusionCharts("line", "mySecondChart", "450", "250", "chart2", "json", dataSource2)
+    return render(request, 'index.html', {'output1': line1.render(),'output2':line2.render()})
+
 
 def login(request):
 

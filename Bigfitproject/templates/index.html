@@ -15,12 +15,10 @@
         <ul>
             <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
             <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
-        </ul>
-        <ul>
-            <div id="chart1">{{ output1|safe }}</div>
-        </ul>
-        <ul>
-            <div id="chart2">{{ output2|safe }}</div>
+            <tr>
+                <td><div id="chart1" style="float:left;margin-left:10px">{{ output1|safe }}</div></td>
+                <td><div id="chart2" style="float:right;margin-right:50px">{{ output2|safe }}</div></td>
+            </tr>
         </ul>
     {% else %}
     <h1>You are not currently online, you can only access the public page.</h1>
