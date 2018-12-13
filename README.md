@@ -84,7 +84,7 @@ Health conscious people
 Owner: us
 
 
-Part B:
+
 1. Decompose your user stories into tasks
     1. Create splash screen
     2. Create login screen
@@ -102,7 +102,7 @@ Part B:
     13. Create calorie consumption tracking screen
     14. Create visualizations for admin
 
-
+MILESTONE - I
 2. ITERATION -1  Decompose your user stories into tasks (Oct 4 � Oct 15)
 Working days: 8 Days
 Create splash screen
@@ -118,15 +118,33 @@ Create view information page
 Create update information page
 Create weight tracking page
 
+MILESTONE - II
+Create weight history screen
+Update entry screen
+Create SMS messaging
+Incorporate calorie suggestion
+Daily calorie consumption entry
+Update/delete calorie consumption
+Create calorie consumption tracking screen
+Create visualizations for admin
+
 
 4. Build the iterations (at most 2) that will compose your Milestone 1.0. Record the total days of work and the time it will take for your team to complete that work.
 
-Total days of work = 26 days (Oct 4 � Nov 8  - 1Milestone, 2 iterations)
+(Oct 4 - Nov 8  - 1Milestone, 2 iterations) Total days of work = 26 days 
+(Nov 9 - Dec 13  - 2Milestone ) Total days of work 20 days
 
 
 5. Make sure you have dealt with velocity before breaking into iterations.
-             Velocitiy � 30% or 0.3 per person
-        4(person) X 26(days) X 0.3(V)  = 31 amount of work for 1      Milestone
+
+        Milestone -I 
+             Velocitiy = 30% or 0.3 per person
+        4(person) X 26(days) X 0.3(V)  = 31 amount of work for 1 Milestone
+        
+        Milestone - II
+              Velocity = 30% or 0.3 per person
+         4(person) X 20(days) X 0.3(V)  = 24 amount of work for 1 Milestone    
+            
 
 
 6. Allocate tasks to each team member and record the allocation.
@@ -139,6 +157,7 @@ Total days of work = 26 days (Oct 4 � Nov 8  - 1Milestone, 2 iterations)
 7. Create a burn down chart for monitoring your team’s progress.
 
     1. Please see "burndown chart- 1 milestone.jpg" under Documents folder
+    2. Please see "burndown chart- 2 milestone.jpg" under Documents folder
 
 8. Include evidence that you are meeting for periodic stand up meetings with your teammates.
     1. Please see meeting minutes under documents folder
