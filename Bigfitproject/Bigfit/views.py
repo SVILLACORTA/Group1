@@ -70,7 +70,6 @@ def index(request):
     line2 = FusionCharts("line", "mySecondChart", "450", "250", "chart2", "json", dataSource2)
     return render(request, 'index.html', {'output1': line1.render(),'output2':line2.render()})
 
-
 def login(request):
 
     if request.session.get('is_login',None):
