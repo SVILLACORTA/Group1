@@ -161,15 +161,16 @@ caption			{background: #efefef;}
 
 /* INDEX.HTML */
 #content		{width:100%; height:auto; padding:20px;	}
-#content h1 	{font-size:50px; font-family:"Arial Rounded MT Bold" ; color:#0877BC; padding:10px; margin-left:10px; text-align:center; }
+#content h1 	{font-size:25px; font-family:"Arial Rounded MT Bold" ; color:#0877BC; padding:10px; margin-left:10px; text-align:center; }
+#content p  	{font-size:16px; font-family:"Arial Rounded MT Bold" ; color:#0877BC; padding:10px; margin-left:10px; text-align:center; }
 #content ul		{}
 #content li		{padding:10px; text-align:center; font-size:20px; font-family:"Arial Rounded MT Bold"}
-#content ul li a		{font-size:30px; font-family:"Arial Rounded MT Bold"; color:#ff0066; margin-left:40px; text-align:center;}
-#content ul li a:link			{font-size:30px; font-family:"Arial Rounded MT Bold"; color:#ff0066;}
-#content ul li a:visited		{font-size:30px; font-family:"Arial Rounded MT Bold"; color:#ff0066;}
-#content ul li a:active		{font-size:30px; font-family:"Arial Rounded MT Bold"; color:#ff0066S;}
-#content ul li a:hover			{font-size:30px; color:#33CC33; font-family:"Arial Rounded MT Bold";}
-#content ul li a:focus			{font-size:30px; font-family:"Arial Rounded MT Bold"; color:#0877BC;}
+#content ul li a		{font-size:20px; font-family:"Arial Rounded MT Bold"; color:#ff0066; margin-left:40px; text-align:center;}
+#content ul li a:link			{font-size:20px; font-family:"Arial Rounded MT Bold"; color:#ff0066;}
+#content ul li a:visited		{font-size:20px; font-family:"Arial Rounded MT Bold"; color:#ff0066;}
+#content ul li a:active		{font-size:20px; font-family:"Arial Rounded MT Bold"; color:#ff0066S;}
+#content ul li a:hover			{font-size:20px; color:#33CC33; font-family:"Arial Rounded MT Bold";}
+#content ul li a:focus			{font-size:20px; font-family:"Arial Rounded MT Bold"; color:#0877BC;}
 
 
 #content table {width:95%;}

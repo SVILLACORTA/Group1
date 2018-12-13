@@ -2,9 +2,13 @@
 {% block title %}Calorie History{% endblock %}
 {% block content %}
 
+    <div id = "content">
+    <p>{{ request.session.user_name }}'s Calorie History </p>
+</div>
+
         <table border="1">
             <tr>
-                <th>ID</th>th>
+                <th>ID</th>
                 <th>Record date</th>
                 <th>Calories</th>
                 <th>Process</th>
@@ -22,5 +26,9 @@
             </tr>
             {% endfor %}
         </table>
+
+        <ul>
+         <li><a href="/index/">Back</a></li>
+    </ul>
 
 {% endblock %}
