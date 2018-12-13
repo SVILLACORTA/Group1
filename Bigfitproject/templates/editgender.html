@@ -3,7 +3,8 @@
 {% block content %}
     <form action="?cid={{ obj.id }}" method="POST">
         {% csrf_token %}
-    <input type="text" name="gender" value="{{ obj.gender }}" />
-    <input type="submit" value="Submit"/>
+        <h2> Reset Gender </h2>
+        <input type="text" name="gender" value="{{ obj.gender }}" style="float:left"/>
+        <input type="submit" value="Submit" style="float:left"/>
     </form>
 {% endblock %}
