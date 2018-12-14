@@ -11,6 +11,7 @@ class User(AbstractUser):
     date_of_birth = models.DateField(null=True)
     gender = models.CharField(choices=SEX_CHOICES, max_length=1, null=True)
     zip_code = models.CharField(max_length=5, null=True)
+    phone = models.CharField(max_length=10, null=True)
 
     @property
     def totalInches(self):
@@ -39,6 +40,7 @@ class WeightTracker(models.Model):
         bmi = round((weight / (inches * inches)) * 703.0, 1)
         return bmi
 
+    @property
     def weightStatus(self):
         status = None
         if self.bmi <= 18.5:

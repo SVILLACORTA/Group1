@@ -49,3 +49,9 @@ class testModel(TestCase):
         wt.save()
         assert wt.bmi == 21.1
 
+    def test_weight_status(self):
+        user = self.create_user()
+        wt = WeightTracker.objects.create(weight=133, user=user)
+        wt.save()
+        assert wt.weightStatus == "Normal weight"
+

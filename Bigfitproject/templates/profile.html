@@ -8,21 +8,17 @@
 
     <table border="1">
         <tr>
-            <th>Username</th>
             <th>Gender</th>
             <th>Target Weight</th>
             <th>Feet</th>
             <th>Inches</th>
             <th>Zip Code</th>
             <th>Date of Birth</th>
+            <th>Phone</th>
+            <th>Email</th>
         </tr>
             {% for item in uli %}
                 <tr>
-                    <td>
-                        {{ item.username }}
-                        |
-                        <a href="/editusername">Edit</a>
-                    </td>
                     <td>
                         {{ item.gender }}
                         |
@@ -52,6 +48,16 @@
                         {{ item.date_of_birth }}
                         |
                         <a href="/editdob">Edit</a>
+                    </td>
+                    <td>
+                        {{ item.phone }}
+                        |
+                        <a href="/editphone">Edit</a>
+                    </td>
+                    <td>
+                        {{ item.email }}
+                        |
+                        <a href="/editemail">Edit</a>
                     </td>
                 </tr>
             {% endfor %}

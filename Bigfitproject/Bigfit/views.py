@@ -117,6 +117,8 @@ def register(request):
             inches = register_form.cleaned_data['inches']
             date_of_birth = register_form.cleaned_data['date_of_birth']
             zip_code = register_form.cleaned_data['zip_code']
+            phone = register_form.cleaned_data['phone']
+            email = register_form.cleaned_data['email']
             gender = register_form.cleaned_data['gender']
 
             if password1 != password2:
@@ -138,6 +140,8 @@ def register(request):
                 new_user.inches = inches
                 new_user.date_of_birth = date_of_birth
                 new_user.zip_code = zip_code
+                new_user.phone = phone
+                new_user.email = email
                 new_user.gender = gender
                 new_user.save()
                 return redirect('/login/')
@@ -310,4 +314,26 @@ def editcaloriehistory(request):
         nid = request.GET.get('nid')
         ucalorie = request.POST.get('title')
         models.CalorieTracker.objects.filter(user_id=cid, id=nid).update(calories=ucalorie)
+        return redirect('/index/')
+
+def editphone(request):
+    if request.method == 'GET':
+        cid = request.user.id
+        obj = models.User.objects.filter(id=cid).first()
+        return render(request, 'editphone.html', {'obj': obj})
+    elif request.method == 'POST':
+        cid = request.user.id
+        phone = request.POST.get('phone')
+        models.User.objects.filter(id=cid).update(phone=phone)
+        return redirect('/index/')
+
+def editemail(request):
+    if request.method == 'GET':
+        cid = request.user.id
+        obj = models.User.objects.filter(id=cid).first()
+        return render(request, 'editemail.html', {'obj': obj})
+    elif request.method == 'POST':
+        cid = request.user.id
+        email = request.POST.get('email')
+        models.User.objects.filter(id=cid).update(email=email)
         return redirect('/index/')
