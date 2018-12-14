@@ -10,6 +10,20 @@ Seher Mumtaz
 Alaa Alhiadari
 
 
+Instructions to run the program:
+In Cmder do the following:
+1. Navigate to c:\temp
+2. Clone project to c:\temp
+    git clone https://github.com/SVILLACORTA/BigFit.git
+3. cd c:\temp\BigFit\Bigfitproject
+4. python manage.py runserver
+5. Open a web browser and type in http://localhost:8000/home in the URL bar
+
+For detailed instructions with screen prints please view "Instructions to run Bigfit program.docx" file under the Documents folder.
+
+
+Part A:
+
 Project Concept: Weight Tracker
 
 We will be building a weight tracker program that will help a person keep track of their weight. This program is perfect for those who need that extra motivation to lose weight by helping one visualize their progress.
@@ -83,7 +97,7 @@ Health conscious people
 
 Owner: us
 
-
+Part B:
 
 1. Decompose your user stories into tasks
     1. Create splash screen
@@ -131,20 +145,20 @@ Create visualizations for admin
 
 4. Build the iterations (at most 2) that will compose your Milestone 1.0. Record the total days of work and the time it will take for your team to complete that work.
 
-(Oct 4 - Nov 8  - 1Milestone, 2 iterations) Total days of work = 26 days 
+(Oct 4 - Nov 8  - 1Milestone, 2 iterations) Total days of work = 26 days
 (Nov 9 - Dec 13  - 2Milestone ) Total days of work 20 days
 
 
 5. Make sure you have dealt with velocity before breaking into iterations.
 
-        Milestone -I 
+        Milestone -I
              Velocitiy = 30% or 0.3 per person
         4(person) X 26(days) X 0.3(V)  = 31 amount of work for 1 Milestone
-        
+
         Milestone - II
               Velocity = 30% or 0.3 per person
          4(person) X 20(days) X 0.3(V)  = 24 amount of work for 1 Milestone    
-            
+
 
 
 6. Allocate tasks to each team member and record the allocation.
@@ -162,7 +176,7 @@ Create visualizations for admin
 8. Include evidence that you are meeting for periodic stand up meetings with your teammates.
     1. Please see meeting minutes under documents folder
 
-Demo present tips:
+Part C:
 
 1.We are using a Python3+Pycharm+Django environment to work on the website. Please download 'Bigfitproject' folder under our git repository and open it with Python IDE. You can use any IDE contains Django to see our progress(We are using Django professional).
 
@@ -172,6 +186,26 @@ Demo present tips:
 
 4.You can also run the project, then open a webpage and enter 'http://127.0.0.1:8000/index' to take a look on our current webpage. We are still working on integrate front end coding with our database, so the system could not work for collecting data.
 
-5.For pytest of our project, you can find them in the folder 'tests'. 
+5.For pytest of our project, you can find them in the folder 'tests'.
 
 6.For running pytest, please open the terminal first, and enter 'pip install pytest-django' under root folder. Then, just enter 'pytest' under root folder to see the pytest result.
+
+7. Remaining tasks:
+    a. Add calorie tracking abilities
+    b. Modify UI
+    c. Add graphs
+    d. Add BMI calculations
+    e. Add weight status
+    f. Add SMS capabilities
+    g. Allow user to edit and/or delete their data
+
+Part D:
+
+Most important things you learned about software development in your project:
+1. Teamwork which consist of having effective communication, collaboration, the ability to work through problems, and respect for each other was essential to our team's success.
+
+2. We were all working simultaneously so using a version control system like GitHub was crucial.
+
+3. The ability to quickly learn new tools is necessary. None of us knew how to develop a Django app, add charts, send SMS messages, etc. so we had to quickly pick up these new skills.
+
+4. As the project progressed, we learned more and more about the Python language. Often, we encountered errors and diligently tried to resolve them. This process gave us a deeper understanding of the language.

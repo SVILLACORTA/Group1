@@ -46,7 +46,7 @@ urlpatterns = [
     path('editinches/', views.editinches),
     path('editzipcode/', views.editzipcode),
     path('editdob/', views.editdob),
-    path('editpassword/', views.editpassword, name='editpassword')
-
-
+    path('editpassword/', views.editpassword, name='editpassword'),
+    path('editphone/', views.editphone),
+    path('editemail/', views.editemail),
 ]

@@ -16,15 +16,21 @@ class RegisterForm(forms.Form):
     first_name = forms.CharField(label="First Name", max_length=256, widget=forms.TextInput(attrs={'class': 'form-control'}))
     last_name = forms.CharField(label="Last Name", max_length=256, widget=forms.TextInput(attrs={'class': 'form-control'}))
     target_weight = forms.IntegerField(label="Target Weight")
+                                       #, max_value="2000", min_value="0")
     feet= forms.IntegerField(label="Feet")
+                             #, max_value="10", min_value="0")
     inches= forms.IntegerField(label="Inches")
+                               #, max_value="12", min_value="0")
     date_of_birth = forms.DateField(label="Birth Date")
-    zip_code = forms.CharField(label="zip code")
-    gender = forms.ChoiceField(label='Sex',choices=SEX_CHOICES)
+    zip_code = forms.CharField(label="zip code", max_length=5, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    phone = forms.CharField(label="phone", max_length=10, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    email = forms.CharField(label="email", max_length=100, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    gender = forms.ChoiceField(label='Sex', choices=SEX_CHOICES)
 
 
 class WeightinputForm(forms.Form):
     current_weight = forms.IntegerField(label="Current Weight")
+
 
 class CalorieinputForm(forms.Form):
     current_calorie = forms.IntegerField(label="Current Calorie")
